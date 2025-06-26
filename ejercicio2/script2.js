@@ -19,4 +19,17 @@ filtrarBtn.addEventListener("click", () => {
     mensajeError.textContent = "Por favor, ingrese texto para filtrar.";
     return;
   }
+    const coincidencias = palabras.filter(p => p.toLowerCase().includes(texto));
+
+  if (coincidencias.length === 0) {
+    resultado.innerHTML = "<p>No se encontraron coincidencias.</p>";
+  } else {
+    const ul = document.createElement("ul");
+    coincidencias.forEach(palabra => {
+      const li = document.createElement("li");
+      li.textContent = palabra;
+      ul.appendChild(li);
+    });
+    resultado.appendChild(ul);
+  }
   });
