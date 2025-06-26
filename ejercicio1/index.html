@@ -3,9 +3,33 @@
 <head>
     <title>calculadora simple</title>
 </head>
+
+<style>
+            body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+            label, select, input, button {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        #resultado {
+            font-weight: bold;
+        }
+
+
+</style>
 <body>
     
-    <h2>Calculadora</h2>
+    <form>
+
+           <h2>Calculadora</h2>
 
     <label for="num1">Número 1:</label>
     <input type="number" id="num1">
@@ -23,7 +47,7 @@
 
 
     <button id="calcular">Calcular</button>
-
+    </form>
 
         <p id="resultado"></p>
 
